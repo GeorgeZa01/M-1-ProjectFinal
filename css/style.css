@@ -1,0 +1,148 @@
+/*LOGIN PAGE CSS*/
+img {
+    width: 250px;
+    height: 250px;
+}
+.login-body {
+    background-image: url(https://img.freepik.com/free-vector/3d-style-black-background-with-paper-layer_206725-669.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.container {
+
+    width: 360px;
+    height: 600px;
+    background-color: #1a2653;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    border-radius: 14px;
+    border-style: solid;
+    border-color: white;
+    opacity: 1;
+
+}
+
+.container h1 {
+
+    font-size: 40px;
+    margin-top: 12px;
+    margin-bottom: 60px;
+    color: black;
+}
+
+.tbox {
+    width: 260px;
+    height: 40px;
+    background: #F1F1F1B3;
+    border-radius: 10px;
+    border-style: solid;
+    margin: 10px auto;
+    transition: .25s;
+
+}
+
+.tbox input {
+
+    background: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 90%;
+    line-height: 37px;
+    font-family: "Montsrerrat", sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.tbox:hover {
+
+    border-color: #9173da;
+}
+
+.btn {
+    width: 260px;
+    height: 40px;
+    background: #704fc2;
+    border-radius: 10px;
+    margin: 14px auto;
+    display: block;
+    font-family: "Montsrerrat", sans-serif;
+    font-size: 16px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s all;
+
+}
+
+.btn:hover {
+    background: #679cdd;
+
+}
+
+.b1 {
+    display: block;
+    width: 260px;
+    padding: 10px, 0;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin: auto;
+    transition: 0.4s all;
+}
+
+.b1:hover {
+    background: #46729e;
+    padding: 15px;
+    border-radius: 10px;
+    /*ended here */
+}
+
+.b2 {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    padding: 10px, 0;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.4s all;
+    color: #42d4f5;
+
+}
+
+.b2:hover {
+    background: #525354;
+    padding: 15px;
+    border-radius: 10px;
+
+    /*ended here */
+}
+
+.modal {
+    background-color: white;
+    position: absolute;
+    top: 33%;
+    left: 33%;
+    text-align: center;
+    padding: 4%;
+    display: none;
+    align-content: center;
+    border-radius: 10px;
+}
+
+/* Responsiveness */
+
+/* @media (max-width: 768px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+} */
