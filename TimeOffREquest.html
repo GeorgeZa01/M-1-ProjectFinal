@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <script src="./js/main.js"></script>
     <title>Time Off Request Form</title>
     <!-- Bootstrap Link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <ul class="nav justify-content-center">
     <li class="nav-item">
@@ -22,36 +24,54 @@
     <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="#">Performance Review</a>
     </li>
-    </ul>
+</ul>
+
 <body>
     <form>
-        <label>Today's Date:</label>
-        <br>
-        <label>Employee's Name:</label>
-        <br>
-        <label>Time-Off Request: </label>
-        <br>
-        <label>Beginning on:</label>
-        <br>
-        <label>Ending on:</label>
-
         <br><br>
-        <h2>Reason for Request<h2>
-            <input type="checkbox">
-            <br>
-            <input type="checkbox">
-            <br>
-            <input type="checkbox">
-            <br>
-            <input type="checkbox">
-            <br>
-            <input type="checkbox">
-            <br>
-            <input type="checkbox">
-            <br>
-        <h2>I understand and agree that this request is subject to approval by my employer</h2>
-
-        <input type >
+        <label>Today's Date: </label>
+        <input>
+        <br>
+        <label>Employee's Name: </label>
+        <input>
+        <br>
+        <label>Time-Off Request Days: </label>
+        <br>
+        <!-- <label>Beginning on:  -->
+        <label for="Beginning">Beginning:</label>
+        <input type="date" id="Beginning" name="Beginning">
+        <input type="submit">
+        </label>
+        <br>
+        <!-- <label>Ending on:  -->
+        <label for="Ending">Ending:</label>
+        <input type="date" id="Ending" name="Ending">
+        <input type="submit">
+        </label>
+        <br><br>
+        <!-- <h2>Reason for Request<h2> -->
+        <br><br>
+        <label>Vacation</label>
+        <input type="checkbox">
+        <br>
+        <label>Personal Leave</label>
+        <input type="checkbox">
+        <br>
+        <label>Funeral</label>
+        <input type="checkbox">
+        <br>
+        <label>Family Reasons</label>
+        <input type="checkbox">
+        <br>
+        <label>Medical Leave</label>
+        <input type="checkbox">
+        <br>
+        <label>Other</label>
+        <input type="checkbox">
+        <br><br>
+        <p>I understand and agree that this request is subject to approval by my employer</p>
+        <input type>
     </form>
 </body>
+
 </html>
