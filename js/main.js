@@ -1,18 +1,31 @@
-function validateLogin(event) {
+let modal; // Define modal in the global scope
+
+async function validateLogin(event) {
   event.preventDefault(); // Prevent form submission and page refresh
 
-  const uname = document.getElementById("uname").value;  // Corrected this line
+  const uname = document.getElementById("uname").value;
   const pwd = document.getElementById("pwd").value;
-  const modal = document.querySelector(".modal");
+  modal = document.querySelector(".modal");  // Initialize modal inside the function
 
   if (
     (uname === "employee" && pwd === "password") ||
     (uname === "hr" && pwd === "password")
   ) {
-    alert("You are now logged in");
+    await Swal.fire({
+      title: "LOGIN Succesful!",
+      text: "Click Ok to continue",
+      icon: "success"
+    });
     window.location.href = uname === "employee" ? "./Html/Index.html" : "./Html/HR.html";
   } else {
     modal.style.display = "block";
     console.error("Invalid credentials"); // Debugging
+  }
+}
+
+// closes modal
+function dismissModal() {
+  if (modal) {
+    modal.style.display = 'none';  // hides modal
   }
 }

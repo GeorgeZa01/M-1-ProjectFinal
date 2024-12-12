@@ -126,17 +126,16 @@ img {
     /*ended here */
 }
 
-.modal {
+.modal{
     background-color: white;
     position: absolute;
     top: 33%;
-    left: 33%;
+    left: 39%;
     text-align: center;
-    padding: 4%;
+    padding: 2% 4%;
+    /* hides modal */
     display: none;
-    align-content: center;
-    border-radius: 10px;
-}
+  }
 
 /* Responsiveness */
 
