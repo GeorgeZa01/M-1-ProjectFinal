@@ -10,7 +10,7 @@ function validateLogin(event) {
     (uname === "hr" && pwd === "password")
   ) {
     alert("You are now logged in");
-    window.location.href = uname === "employee" ? "./Html/index.html" : "./Html/indexHR.html";
+    window.location.href = uname === "employee" ? "./Html/Index.html" : "./Html/HR.html";
   } else {
     modal.style.display = "block";
     console.error("Invalid credentials"); // Debugging
