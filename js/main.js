@@ -16,7 +16,7 @@ async function validateLogin(event) {
       text: "Click Ok to continue",
       icon: "success"
     });
-    window.location.href = uname === "employee" ? ".../Html/Timeoff.html" : "../Html/HR.html";
+    window.location.href = uname === "employee" ? "./Html/Timeoff.html" : "./Html/HR.html";
   } else {
     modal.style.display = "block";
     modal.style.justifyContent = "center";
