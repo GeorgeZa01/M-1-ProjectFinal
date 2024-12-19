@@ -3,8 +3,18 @@ img {
     width: 250px;
     height: 250px;
 }
+::-webkit-scrollbar {
+    width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+    background-color: #1a2653;
+    }
+    ::-webkit-scrollbar-thumb {
+    background-color: #9173da;
+    }
+
 .login-body {
-    background-image: url(https://img.freepik.com/free-vector/3d-style-black-background-with-paper-layer_206725-669.jpg);
+    background-image: url(../assets/New\ background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -135,7 +145,7 @@ img {
     padding: 2% 4%;
     /* hides modal */
     display: none;
-  }
+    }
 
 /* Responsiveness */
 

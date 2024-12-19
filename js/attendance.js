@@ -54,7 +54,7 @@ fetch("../data/attendance.json")
           </tbody>
         </table>
         <br>
-        <hr>
+        <hr width="10px">
       `;
       contentDiv.appendChild(employeeSection);
     });
