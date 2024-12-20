@@ -9,7 +9,7 @@ fetch("../data/attendance.json")
       employeeSection.innerHTML = `
         <h2>${employee.name} (ID: ${employee.employeeId})</h2>
         <h3>Attendance</h3>
-        <table id="myTable" class="table   table-bordered" >
+        <table id="myTable" class="table table-bordered">
           <thead>
             <tr>
               <th>Date</th>
@@ -28,7 +28,7 @@ fetch("../data/attendance.json")
               )
               .join("")}
           </tbody>
-        </table >
+        </table>
         <br>
         <h3>Leave Requests</h3>
         <table id="leave-table" class="table table-striped table-bordered">
@@ -37,16 +37,21 @@ fetch("../data/attendance.json")
               <th>Date</th>
               <th>Reason</th>
               <th>Status</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             ${employee.leaveRequests
               .map(
-                (leave) => `
-                <tr>
+                (leave, index) => `
+                <tr data-employee-id="${employee.employeeId}" data-leave-index="${index}">
                   <td>${leave.date}</td>
                   <td>${leave.reason}</td>
-                  <td>${leave.status}</td>
+                  <td class="leave-status">${leave.status}</td>
+                  <td>
+                    <button class="btn btn-success btn-sm" onclick="approveLeave(${employee.employeeId}, ${index})">Approve</button>
+                    <button class="btn btn-danger btn-sm" onclick="denyLeave(${employee.employeeId}, ${index})">Deny</button>
+                  </td>
                 </tr>
               `
               )
@@ -62,3 +67,21 @@ fetch("../data/attendance.json")
   .catch((error) => {
     console.error("Error fetching the JSON file:", error);
   });
+
+// Approve Leave Function
+function approveLeave(employeeId, leaveIndex) {
+  const row = document.querySelector(`tr[data-employee-id="${employeeId}"][data-leave-index="${leaveIndex}"]`);
+  const statusCell = row.querySelector(".leave-status");
+
+  statusCell.textContent = "Approved";
+  Swal.fire("Success", "Leave request approved.", "success");
+}
+
+// Deny Leave Function
+function denyLeave(employeeId, leaveIndex) {
+  const row = document.querySelector(`tr[data-employee-id="${employeeId}"][data-leave-index="${leaveIndex}"]`);
+  const statusCell = row.querySelector(".leave-status");
+
+  statusCell.textContent = "Denied";
+  Swal.fire("Success", "Leave request denied.", "success");
+}
